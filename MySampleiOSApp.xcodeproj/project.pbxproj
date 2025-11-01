@@ -17,6 +17,9 @@
 		2A1D1E1F2C8A1B5000AB1234 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D1E1E2C8A1B5000AB1234 /* LoginViewModelTests.swift */; };
 		2A1D1E212C8A1B5100AB1234 /* ValidationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D1E202C8A1B5100AB1234 /* ValidationServiceTests.swift */; };
 		2A1D1E232C8A1B5200AB1234 /* AuthenticationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D1E222C8A1B5200AB1234 /* AuthenticationServiceTests.swift */; };
+		2A1D1E242C8A1B6000AB1234 /* PoliceStationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D1E252C8A1B6000AB1234 /* PoliceStationMapView.swift */; };
+		2A1D1E262C8A1B6100AB1234 /* PoliceStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D1E272C8A1B6100AB1234 /* PoliceStation.swift */; };
+		2A1D1E282C8A1B6200AB1234 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1D1E292C8A1B6200AB1234 /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		2A1D1E1E2C8A1B5000AB1234 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		2A1D1E202C8A1B5100AB1234 /* ValidationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceTests.swift; sourceTree = "<group>"; };
 		2A1D1E222C8A1B5200AB1234 /* AuthenticationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceTests.swift; sourceTree = "<group>"; };
+		2A1D1E252C8A1B6000AB1234 /* PoliceStationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceStationMapView.swift; sourceTree = "<group>"; };
+		2A1D1E272C8A1B6100AB1234 /* PoliceStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceStation.swift; sourceTree = "<group>"; };
+		2A1D1E292C8A1B6200AB1234 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 				2A1D1E002C8A1B2E00AB1234 /* MySampleiOSAppApp.swift */,
 				2A1D1E0E2C8A1B3000AB1234 /* Views */,
 				2A1D1E0D2C8A1B3000AB1234 /* ViewModels */,
+				2A1D1E2A2C8A1B6300AB1234 /* Models */,
 				2A1D1E0C2C8A1B3000AB1234 /* Services */,
 				2A1D1E042C8A1B2F00AB1234 /* Assets.xcassets */,
 			);
@@ -97,6 +104,7 @@
 			children = (
 				2A1D1E132C8A1B3200AB1234 /* AuthenticationService.swift */,
 				2A1D1E152C8A1B3300AB1234 /* ValidationService.swift */,
+				2A1D1E292C8A1B6200AB1234 /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -114,8 +122,17 @@
 			children = (
 				2A1D1E022C8A1B2E00AB1234 /* ContentView.swift */,
 				2A1D1E0F2C8A1B3000AB1234 /* LoginView.swift */,
+				2A1D1E252C8A1B6000AB1234 /* PoliceStationMapView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2A1D1E2A2C8A1B6300AB1234 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2A1D1E272C8A1B6100AB1234 /* PoliceStation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2A1D1E192C8A1B4F00AB1234 /* MySampleiOSAppTests */ = {
@@ -225,6 +242,9 @@
 				2A1D1E122C8A1B3100AB1234 /* LoginViewModel.swift in Sources */,
 				2A1D1E142C8A1B3200AB1234 /* AuthenticationService.swift in Sources */,
 				2A1D1E162C8A1B3300AB1234 /* ValidationService.swift in Sources */,
+				2A1D1E242C8A1B6000AB1234 /* PoliceStationMapView.swift in Sources */,
+				2A1D1E262C8A1B6100AB1234 /* PoliceStation.swift in Sources */,
+				2A1D1E282C8A1B6200AB1234 /* LocationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,7 +4,7 @@ struct LoginView: View {
 
     // MARK: - Properties
 
-    @StateObject private var viewModel = LoginViewModel()
+    @ObservedObject var viewModel: LoginViewModel
     @FocusState private var focusedField: Field?
 
     // MARK: - Field Enum
@@ -227,5 +227,5 @@ struct LoginView: View {
 // MARK: - Preview
 
 #Preview {
-    LoginView()
+    LoginView(viewModel: LoginViewModel())
 }
