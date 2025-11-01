@@ -41,7 +41,7 @@ struct LoginView: View {
                         }
 
                         // Success Message
-                        if viewModel.isAuthenticated {
+                        if viewModel.isLoggedIn {
                             successView
                         }
 
@@ -83,7 +83,7 @@ struct LoginView: View {
             VStack(alignment: .leading, spacing: 8) {
                 emailField
 
-                if let errorMessage = viewModel.emailErrorMessage() {
+                if let errorMessage = viewModel.emailError {
                     Text(errorMessage)
                         .font(.caption)
                         .foregroundColor(.red)
@@ -94,7 +94,7 @@ struct LoginView: View {
             VStack(alignment: .leading, spacing: 8) {
                 passwordField
 
-                if let errorMessage = viewModel.passwordErrorMessage() {
+                if let errorMessage = viewModel.passwordError {
                     Text(errorMessage)
                         .font(.caption)
                         .foregroundColor(.red)
@@ -171,11 +171,11 @@ struct LoginView: View {
             }
             .frame(maxWidth: .infinity)
             .padding()
-            .background(viewModel.canSubmit ? Color.blue : Color.gray)
+            .background(viewModel.isFormValid ? Color.blue : Color.gray)
             .foregroundColor(.white)
             .cornerRadius(10)
         }
-        .disabled(!viewModel.canSubmit)
+        .disabled(!viewModel.isFormValid)
     }
 
     private func errorView(message: String) -> some View {
@@ -217,9 +217,9 @@ struct LoginView: View {
 
         switch field {
         case .email:
-            return viewModel.email.isEmpty || viewModel.isEmailValid ? .blue : .red
+            return viewModel.email.isEmpty || viewModel.emailError == nil ? .blue : .red
         case .password:
-            return viewModel.password.isEmpty || viewModel.isPasswordValid ? .blue : .red
+            return viewModel.password.isEmpty || viewModel.passwordError == nil ? .blue : .red
         }
     }
 }
